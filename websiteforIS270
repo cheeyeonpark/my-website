@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
+<style>
+    body {
+        font-size: 16px;
+        text-align: center;
+        background-color: #111;
+    }
 
+    /* Rainbow animated text */
+    .rainbow {
+        background: linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow,
+            green,
+            cyan,
+            blue,
+            violet,
+            red
+        );
+        background-size: 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowMove 8s linear infinite;
+    }
+
+    @keyframes rainbowMove {
+        0% { background-position: 0%; }
+        100% { background-position: 400%; }
+    }
+</style>
 </head>
 
 <body>
 
-<p>Welcome to my webpage!</p>
+<h1 class="rainbow">Listen to music here</h1>
+
+<a class="rainbow" href="https://www.wnyc.org/shows/newsounds">New Sounds</a>
+
+<p class="rainbow">Welcome to my webpage!</p>
 
 </body>
-
 </html>
